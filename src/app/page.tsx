@@ -1,18 +1,15 @@
-import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <div>
-      <header>
-        <h1>Infoweb - Atividade 1 do 2o bimestre</h1>
-      </header>
-      <main>
-        <h2>Atividade 1 do 2o bimestre com hook reducer e shadcnui</h2>
-      </main>
-      <footer>
-        <p>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</p>
-        <p><a href="https://fsf.org/">Copyright (C) 2007 Free Software Foundation, Inc.</a></p>
-      </footer>
-    </div>
+    <main className="p-4 m-20">
+      <h1 className="text-2xl text-pink-600 font-bold mb-2">Atividade 1 do segundo bim | Aplicativo de Tarefas</h1>
+      <p className="mb-4">Bem-vindo! Use o menu para navegar.</p>
+
+      <Link href="/tarefas">
+        <Button className="text-xl bg-pink-400 font-bold mb-3">Acessar Tarefas</Button>
+      </Link>
+    </main>
   );
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { TarefaProvider } from "@/lib/TarefaContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,17 +18,11 @@ export const metadata: Metadata = {
   description: "Atividade 1 do 2o bimestre com hook reducer e shadcnui",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="pt-BR">
+      <body>
+        <TarefaProvider>{children}</TarefaProvider>
       </body>
     </html>
   );
